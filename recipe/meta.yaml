@@ -1,5 +1,5 @@
 {% set name = "fast_dp" %}
-{% set version = "1.7" %}
+{% set version = "2.0" %}
 
 package:
   name: {{ name|lower|replace("-", "_") }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ade6bf3d398a80e169980e8ae608bf20e883c1094a2062665f3cc1dc273e99f5
+  sha256: d9c6ea98d3a352ae391166a616cc5451a32f3bf8cc434aafedaf641edd5ef978
   patches:
     - procrunner.diff
 
 build:
   noarch: python
-  number: 2
+  number: 0
   entry_points:
     - fast_dp = fast_dp.fast_dp:main
     - fast_rdp = fast_dp.fast_rdp:main
